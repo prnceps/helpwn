@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+    helpwn:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - "$PWD/sharing:/sharing"
+        privileged: true
+        cap_add:
+            - SYS_PTRACE
+        security_opt:
+            - seccomp:unconfined
+        stdin_open: true
+        tty: true
+        command: /bin/zsh
