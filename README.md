@@ -1,3 +1,3 @@
 # helpwn
 
-Docker 기반 포너블 환경 세팅 프로그램
+docker-compose를 사용한 포너블 환경 세팅
