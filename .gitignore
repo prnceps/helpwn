@@ -195,3 +195,4 @@ cython_debug/
 
 # Docker sharing folder
 sharing/*
+!sharing/.gitkeeper
