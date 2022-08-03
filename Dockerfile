@@ -18,7 +18,7 @@ RUN apt install python3 python3-pip -y
 RUN apt install curl git wget file zsh sudo vim ruby ruby-full gem -y
 
 # Install C compiler
-RUN apt install build-essential libc6-i386 libc6-dbg gcc-multilib make gcc gdb -y
+RUN apt install build-essential libc6-i386 libc6-dbg libc6-dbg:i386 gcc-multilib make gcc gdb glibc-source -y
 RUN dpkg --add-architecture i386
 
 # Install tmux (for gdb.attach)
@@ -33,6 +33,10 @@ RUN pip3 install ropgadget pwntools
 # Install gdb-peda
 RUN git clone https://github.com/longld/peda.git ~/peda
 RUN echo "source ~/peda/peda.py" >> ~/.gdbinit
+
+# Install pwngdb
+RUN git clone https://github.com/scwuaptx/Pwngdb.git ~/Pwngdb
+RUN cp ~/Pwngdb/.gdbinit ~/
 
 # Install zsh plugins
 RUN git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
