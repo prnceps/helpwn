@@ -4,7 +4,7 @@ docker-compose를 사용한 포너블 환경 세팅
 
 ### how to
 ```shell
-docker-compose up -d --build
+docker-compose build --no-cache --build-arg ubuntu_version="UBUNTU VERSION"
 ```
 
 ### reference

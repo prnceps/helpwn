@@ -4,6 +4,8 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
+            args:
+                - ubuntu_version="18.04"
         volumes:
             - "$PWD/sharing:/sharing"
         privileged: true
