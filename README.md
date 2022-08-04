@@ -1,6 +1,5 @@
 # helpwn
-
-docker-compose를 사용한 포너블 환경 세팅
+docker-compose를 사용한 포너블 환경 구축
 
 ### build
 ```shell
