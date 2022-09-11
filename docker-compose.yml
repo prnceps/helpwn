@@ -1,18 +1,18 @@
 version: "3"
 services:
-    helpwn:
-        build:
-            context: .
-            dockerfile: Dockerfile
-            args:
-                - ubuntu_version="18.04"
-        volumes:
-            - "$PWD/sharing:/sharing"
-        privileged: true
-        cap_add:
-            - SYS_PTRACE
-        security_opt:
-            - seccomp:unconfined
-        stdin_open: true
-        tty: true
-        command: /bin/zsh
+  helpwn:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - ubuntu_version=20.04
+    volumes:
+      - "$PWD/sharing:/sharing"
+    privileged: true
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    stdin_open: true
+    tty: true
+    command: /bin/zsh
