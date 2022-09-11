@@ -2,7 +2,7 @@ ARG ubuntu_version
 
 FROM ubuntu:${ubuntu_version}
 
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+# RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # Environment setting
 ENV TZ Asia/Seoul
@@ -51,14 +51,14 @@ RUN git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-buil
 RUN echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
 RUN echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 
-RUN /root/.rbenv/bin/rbenv install 2.5.0
-RUN /root/.rbenv/bin/rbenv global 2.5.0
+# RUN /root/.rbenv/bin/rbenv install 2.5.0
+# RUN /root/.rbenv/bin/rbenv global 2.5.0
 
 # Install one-gadget, seccomp-tools
 # RUN gem install one_gadget seccomp-tools
 
 # Install ropgadget, pwntools
-RUN pip3 install setuptools-rust && pip3 install --upgrade pip
+# RUN pip3 install setuptools-rust && pip3 install --upgrade pip
 # RUN pip3 install ropgadget pwntools
 
 # Install gdb-peda
